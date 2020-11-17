@@ -1,18 +1,33 @@
 window.addEventListener('DOMContentLoaded', () => {
-	var audio	 = document.getElementById('audio');
-	audio.volume = 0.1;
+	var btn = document.getElementById('start');
+	btn.addEventListener('click', onClick);
 
-	var ct = document.getElementById('times');
-	fetch('https://sushicat.rocks/api/isaac-bonk')
-		.then((res) => res.json())
-		.then((json) => {
-			ct.innerHTML = json.count;
-		})
-		.catch(console.error);
+	function onClick() {
+		btn.removeEventListener('click', onClick);
 
-	// make hammer visible
-	var hammer = document.getElementById('mallet');
-	setInterval(() => {
-		hammer.style = '';
-	}, 1750);
+		var audio = document.createElement('audio');
+		audio.src = 'public/noise.m4a';
+		audio.volume = 0.1;
+		audio.play();
+
+		btn.style = 'display: none'
+
+		document.getElementById('isaac-pre').style = '';
+		document.getElementById('isaac-post').style = '';
+		document.getElementById('timedisplay').style = '';
+
+		var ct = document.getElementById('times');
+		fetch('https://sushicat.rocks/api/isaac-bonk')
+			.then((res) => res.json())
+			.then((json) => {
+				ct.innerHTML = json.count;
+			})
+			.catch(console.error);
+
+		// make hammer visible
+		var hammer = document.getElementById('mallet');
+		setInterval(() => {
+			hammer.style = '';
+		}, 1750);
+	}
 });

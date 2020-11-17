@@ -8,14 +8,15 @@
   <script src="main.js"></script>
 </head>
 <body>
-  <b class="appear">isaac has been bonked <span id="times">(could not retrieve)</span> times</b>
-  <img id="isaac-pre" src="public/isaac-cropped.png" class="disappear center" />
-  <img id="isaac-post" src="public/isaac-prebonk.png" class="appear center above postbonk-squish" />
-  <img id="mallet" src="public/mallet.png" style="display: none" class="center mallet" />
-  <audio autoplay id="audio">
-    <source src="public/noise.m4a">
-  </audio>
+  <button id="start" class="start-button">
+    <img src="public/button.png">
+      <div>b o n k</div>
+    </img>
+  </button>
 
-  <b class="bottom">if there's no 🔊, refresh</b>
+  <b class="appear" style="display: none" id="timedisplay">isaac has been bonked <span id="times">(could not retrieve)</span> times</b>
+  <img id="isaac-pre" src="public/isaac-cropped.png" class="disappear center" style="display: none" />
+  <img id="isaac-post" src="public/isaac-prebonk.png" class="appear center above postbonk-squish" style="display: none" />
+  <img id="mallet" src="public/mallet.png" style="display: none" class="center mallet" />
 </body>
 </html>
