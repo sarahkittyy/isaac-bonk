@@ -1,0 +1,53 @@
+@keyframes opac {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.appear {
+	animation: opac 1s linear 2s 1 normal;
+	animation-fill-mode: both;
+}
+
+.disappear {
+	animation: opac 1s linear 2s 1 reverse;
+	animation-fill-mode: both;
+}
+
+@keyframes rotate {
+	from {
+		transform: translate(120px, -155px) rotate(90deg);
+	}
+	to {
+		transform: translate(120px, -155px) rotate(0deg);
+	}
+}
+
+.mallet {
+	animation: rotate 0.1s ease-in-out 0s 1 normal;
+	animation-fill-mode: both;
+	z-index: 9999;
+}
+
+.center {
+	position: absolute;
+	display: block;
+	margin: auto;
+	bottom: 50%;
+	left: 50%;
+	width: 500px;
+	margin-left: -250px;
+	margin-bottom: -250px;
+}
+
+.postbonk-squish {
+	height: 320px;
+}
+
+.above {
+	z-index: 999;
+}
