@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-	var audio	 = document.getElementById('bgm');
+	var audio	 = document.getElementById('audio');
 	audio.volume = 0.1;
 
 	var ct = document.getElementById('times');
