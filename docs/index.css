@@ -33,6 +33,14 @@
 	z-index: 9999;
 }
 
+.bottom {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	width: 300px;
+	margin-left: -150px;
+}
+
 .center {
 	position: absolute;
 	display: block;
